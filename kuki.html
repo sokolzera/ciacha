@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="kuki.css">
+</head>
+<body onload= "znikaj()">
+      <div id="guzior">Klikajac przycisk Akceptuje,akceptujesz cookie.
+    <button onclick="accept()" id="acceptguzior">Akceptuje</button>
+  </div>
+ <script>
+ function accept(){
+      let acceptguzior = document.getElementById("guzior")
+      acceptguzior.style.display = "none";
+      document.cookie = "cookieAccept : true"
+       window.alert("Zaakceptowano ciastka")
+}
+
+ function znikaj(){
+    if(document.cookie == "cookieAccept : true"){
+      document.getElementById("guzior").style.display = "none";
+    }
+    else
+    document.getElementById("guzior").style.visibility = "block";
+    }
+
+  </script>
+</body>
+</html>
